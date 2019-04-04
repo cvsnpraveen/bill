@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import TodoForm from './TodoForm';
+import Nav from './Components/Nav';
+import DataGrid from './Components/DataGrid';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>To-do App</h2>
-        <TodoForm/>
+        <Nav></Nav>
 
+        <DataGrid></DataGrid>
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>

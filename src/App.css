@@ -31,3 +31,33 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom Styles */
+
+header{
+  border-bottom: 1px solid #ccc;
+  background: #f1f1f1;
+}
+
+.navbar {
+  border-radius: unset;
+}
+.navbar .navbar-brand {
+  color: #adff2f;
+}
+.navbar .container-fluid {
+  max-width: 1024px;
+}
+table.table-bordered{
+  width: 994px;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+table.table-bordered td {
+  vertical-align: middle;
+}
+
+table.table-bordered input {
+    width: 40px;
+  margin: 0 auto;
+}
