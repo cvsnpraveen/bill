@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Date substraction</title>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+var today_date = new Date("25-Dec-2018")
+var user_date = new Date("24-Mar-2019");
+var diff_date =  user_date - today_date;
+
+var num_years = diff_date/31536000000;
+var num_months = (diff_date % 31536000000)/2628000000;
+var num_days = ((diff_date % 31536000000) % 2628000000)/86400000;
+
+document.write("Number of years: " + Math.floor(num_years) + "<br>");
+document.write("Number of months: " + Math.floor(num_months) + "<br>");
+document.write("Number of days: " + Math.floor(num_days) + "<br>");
+//-->
+
+
+var dueDate = new Date("16-Mar-2019");
+var curr = new Date();
+
+//declare month cycle rrr
+
+if(dueDate.getFullYear() == curr.getFullYear()){
+	console.log("Same year")
+	 if(dueDate.getMonth() == curr.getMonth()){
+	console.log("Same Month");
+} else{
+	console.log(curr.getMonth() - dueDate.getMonth());
+		if(((dueDate.getDate() <= 15) && (curr.getDate() <= 15)) || ((dueDate.getDate() > 15) && (curr.getDate() > 15))){
+		console.log("==1=>>", curr.getMonth() - dueDate.getMonth()+1)
+	}
+	if(((dueDate.getDate() <= 15) && (curr.getDate() > 15)) || ((dueDate.getDate() > 15) && (curr.getDate() <= 15))){
+		console.log("==2=>>", curr.getMonth() - dueDate.getMonth())
+	}
+
+}
+
+} else {
+	console.log("==>", curr.getFullYear() - dueDate.getFullYear());
+	if(((dueDate.getDate() <= 15) && (curr.getDate() <= 15)) || ((dueDate.getDate() > 15) && (curr.getDate() > 15))){
+		console.log("==3=>>", curr.getMonth() - dueDate.getMonth())
+	}
+	if(((dueDate.getDate() <= 15) && (curr.getDate() > 15)) || ((dueDate.getDate() > 15) && (curr.getDate() <= 15))){
+		console.log("=4==>>", curr.getMonth() - dueDate.getMonth()+1)
+	}
+}
+
+
+</script>
+</body>
+</html>
