@@ -24,11 +24,11 @@ class DataGrid extends React.Component {
                                 <tr key={i}>
                                     <td>{i + 1}</td>
                                     <td><input type="checkbox" checked={item.choosen} name={i} onChange={(e) => this.props.onChange(e, "check")} /></td>
-                                    <td>{item.name}</td>
+                                    <td className="text-left">{item.name}</td>
                                     <td>{item.number}</td>
                                     <td>{item.denomination}</td>
                                     <td>{item.paidUpto}</td>
-                                    <td><input type="text" value={item.installment} name={i} id={item.number} onChange={(e) => this.props.onChange(e, "text")} /></td>
+                                    <td><input type="text" value={item.installment} disabled name={i} id={item.number} onChange={(e) => this.props.onChange(e, "text")} /></td>
                                     <td>{item.dueDate}</td>
                                 </tr>
                             )}
